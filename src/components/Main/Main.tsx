@@ -1,5 +1,6 @@
 import React, { FC, useEffect, useState } from 'react'
 import styles from './Main.module.css'
+import { PhotoProvider, PhotoView } from 'react-photo-view'
 const env = require('../../.env.json')
 
 const Main = () => {
@@ -88,15 +89,20 @@ const Main = () => {
           </div>
         </div>
       </section>
-      <h1 className="">Gallery</h1>
+      <h1 className="main-title">Latest Designs</h1>
       <section className="gallery">
-        {images.slice(0, 8).map((image: any) => (
-          <img
-            src={env.REST_API.url + '/files/' + image._id}
-            alt={image.title}
-            key={image._id}
-          />
-        ))}
+        <PhotoProvider>
+          {images.map((image: any, index) => (
+            <PhotoView
+              key={index}
+              src={env.REST_API.url + '/files/' + image?._id}
+            >
+              {index < images.length ? (
+                <img src={env.REST_API.url + '/files/' + image?._id} alt="" />
+              ) : undefined}
+            </PhotoView>
+          ))}
+        </PhotoProvider>
       </section>
       <h1>Contact Us</h1>
       <form onSubmit={(ev) => onSubmit(ev)}>

@@ -4,8 +4,10 @@ import styles from './Gallery.module.css';
 interface GalleryProps {}
 
 const Gallery: FC<GalleryProps> = () => (
-  <div className={styles.Gallery}>
-    Gallery Component
+  <div>
+    <section className='main-title'>
+      <h1>Gallery</h1>
+    </section>
   </div>
 );
 

@@ -5,7 +5,7 @@ interface FooterProps {}
 
 const Footer: FC<FooterProps> = () => (
   <div className={styles.Footer}>
-    Footer Component
+   <p>Build from scratch by PcBuildz Web &copy; 2024</p> 
   </div>
 );
 
