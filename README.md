@@ -1,5 +1,5 @@
 # July's Nails Studio APP 
-## a makeup studio web page made with React 
+## a makeup studio web app made with React 
 
 ## Getting Started with Create React App
 
