@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+## July's Nails Studio Application - a makeup studio web page made with React
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
